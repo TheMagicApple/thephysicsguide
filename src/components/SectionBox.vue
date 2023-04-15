@@ -1,0 +1,91 @@
+<template>
+	<div :style="css" v-bind:class="name">
+		<router-link :to="name">Link</router-link>
+		<b>{{name}}</b>
+	</div>
+</template>
+<script>
+export default{
+	props:["name","color"],
+	computed:{
+		css(){
+			return{
+				"--color":this.color,
+			}
+		}
+	}
+}
+</script>
+<style scoped>
+a{
+	color:rgba(0,0,0,0);
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0%;
+	top:0%;
+}
+div{
+	background-color:var(--color);
+	width:300px;
+	height:150px;
+	border-radius:20px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	color:white;
+	font-size:35px;
+	position:absolute;
+	animation-name:spin;
+	animation-duration:16s;
+	animation-iteration-count:infinite;
+	animation-timing-function:ease;
+	transition:0.2s all;
+}
+div:hover{
+	transform:scale(1.1);
+}
+.Kinematics{
+	animation-delay:-14s;
+}
+.Vectors{
+	animation-delay:-12s;
+}
+.Dynamics{
+	animation-delay:-10s;
+}
+.Centripetal{
+	animation-delay:-8s;
+}
+.Energy{
+	animation-delay:-6s;
+}
+.Momentum{
+	animation-delay:-4s;
+}
+.Rotational{
+	animation-delay:-2s;
+}
+.Harmonic{
+	animation-delay:0s;
+}
+@keyframes spin{
+	0%{left:15%;top:15%}
+	7%{left:15%;top:15%}
+	12.5%{left:5%;top:45%}
+	19.5%{left:5%;top:45%}
+	25%{left:15%;top:75%}
+	32%{left:15%;top:75%}
+	37.5%{left:40%;top:75%}
+	44.5%{left:40%;top:75%}
+	50%{left:65%;top:75%}
+	57%{left:65%;top:75%}
+	62.5%{left:80%;top:45%}
+	69.5%{left:80%;top:45%}
+	75%{left:65%;top:15%}
+	82%{left:65%;top:15%}
+	87.5%{left:40%;top:15%}
+	94.5%{left:40%;top:15%}
+	100%{left:15%;top:15%}
+}
+</style>
