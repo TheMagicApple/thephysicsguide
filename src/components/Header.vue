@@ -12,6 +12,7 @@ div{
 	position:absolute;
 	width:100%;
 	height:10%;
+	min-height:108px;
 	left:0%;
 	top:0%;
 	border-bottom:2px solid rgba(0,0,0,0.2);

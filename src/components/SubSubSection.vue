@@ -12,7 +12,7 @@ export default{
 	computed:{
 		css(){
 			return{
-				"--y":(parseInt(this.y)+parseInt(this.n)*13.88)+"%",
+				"--y":((parseInt(this.y)+parseInt(this.n)*13.88))*10.8+"px",
 			}
 		}
 	}
@@ -44,7 +44,9 @@ export default{
 #Title{
 	position:absolute;
 	width:100%;
+	min-width:480px;
 	height:20%;
+	min-height:30px;
 	font-size:25px;
 	text-align:left;
 	left:0%;
@@ -65,6 +67,7 @@ export default{
 #Desc{
 	position:absolute;
 	width:100%;
+	min-width:480px;
 	height:20%;
 	font-size:18px;
 	text-align:left;

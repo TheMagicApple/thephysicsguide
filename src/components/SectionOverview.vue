@@ -19,11 +19,14 @@ export default{
 <style scoped>
 #Background{
 	width:100%;
+	
 	height:50%;
+	min-height:540px;
 	background-color:var(--color);
 	position:absolute;
 	left:0%;
 	top:10.2%;
+	
 }
 #Title{
 	color:white;
@@ -45,8 +48,10 @@ export default{
 	text-align:center;
 	position:absolute;
 	width:40%;
+	min-width:750px;
 	height:20%;
-	left:30%;
+	left: 50%;
+	transform: translateX(-50%);
 	top:60%;
 	font-size:30px;
 }

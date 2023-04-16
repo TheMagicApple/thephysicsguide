@@ -11,7 +11,7 @@ export default{
 		css(){
 			return{
 				"--height":this.num*150+"px",
-				"--y":this.y
+				"--y":this.y*10.8+"px"
 			}
 		}
 	}
